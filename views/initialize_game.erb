@@ -1,18 +1,18 @@
-<!-- <div style="border: 2px solid black">
-<% @a = @board.grid.map do |key, value| key %>
+<div style="border: 2px solid black; width: 500px; height: 500px">
+<% @board.grid.map do |key, value| %>
+  <% if @board.grid[key].content.is_a?(Water) %>
+    <div style="background-color: blue; display: inline-block; width: 44px; height: 46px; margin-right: 0"><%= key %></div>
+  <% else %>
+    <div style="background-color: yellow; display: inline-block; width: 44px; height: 46px; margin-right: 0"><%= key %></div>
+  <% end %>
 <% end %>
-
-<% @b = @a.each_slice(10).to_a %>
-<% @b.each { |b| %>
-  <div> <%= b %> </div>
-  <% } %>
 </div>
+<div>
 
-<div> -->
-<<%= @result %>
+
    <form action="/initialize_game">
     Place your Patrol Boat:
-    <input type="text" name="Location" required>
+    <input type="text" name="location" required>
     <input type="text" name="orientation" required>
      <!-- Place your Submarine:
     <input type="text" name="Location" required>

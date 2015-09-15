@@ -14,9 +14,9 @@ feature 'Starting a new game' do
     expect(page).to have_content "Welcome Jongmin"
   end
 
-  scenario 'There is a form to enter your name' do
+  scenario 'You can start a game by clicking the button' do
     visit 'new_game?name=Usman'
     click_button 'Start Game'
-    # expect(page).to have
+    expect(page).to have_button('Place Ship')
   end
 end

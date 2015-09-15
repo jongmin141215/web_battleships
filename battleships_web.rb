@@ -17,7 +17,6 @@ class BattleshipWeb < Sinatra::Base
 
   get '/new_game' do
     @player = params[:name]
-    # session[:name] = @player
     erb :new_game
   end
 
@@ -31,8 +30,6 @@ class BattleshipWeb < Sinatra::Base
     @battleship = Ship.battleship
     @destroyer = Ship.destroyer
     @submarine = Ship.submarine
-    @location = params[:location]
-    @orientation = params[:orientation]
     @result = @board.print_board
     erb :initialize_game
 
