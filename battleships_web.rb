@@ -22,10 +22,16 @@ class BattleshipWeb < Sinatra::Base
   end
 
   get '/initialize_game' do
-    p @game = Game.new
-    p @player = Player.new
-    p @game.add_player(@player)
-    p @board = Board.new(Cell)
+    @game = Game.new
+    @player = Player.new
+    @game.add_player(@player)
+    @board = Board.new(Cell)
+    @patrol = Ship.patrol_boat
+    @aircraft = Ship.aircraft_carrier
+    @battleship = Ship.battleship
+    @destroyer = Ship.destroyer
+    @submarine = Ship.submarine
+
     erb :initialize_game
   end
 
