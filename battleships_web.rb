@@ -31,8 +31,8 @@ class BattleshipWeb < Sinatra::Base
     @battleship = Ship.battleship
     @destroyer = Ship.destroyer
     @submarine = Ship.submarine
-
     erb :initialize_game
+
   end
 
   # start the server if ruby file executed directly
