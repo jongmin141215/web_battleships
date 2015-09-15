@@ -33,7 +33,7 @@ class BattleshipWeb < Sinatra::Base
     @submarine = Ship.submarine
     @location = params[:location]
     @orientation = params[:orientation]
-
+    @result = @board.print_board
     erb :initialize_game
 
   end
