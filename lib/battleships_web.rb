@@ -9,6 +9,7 @@ class BattleshipWeb < Sinatra::Base
   end
 
   get '/new_game' do
+    @player = params[:name]
     erb :new_game
   end
 
