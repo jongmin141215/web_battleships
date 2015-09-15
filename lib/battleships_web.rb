@@ -1,4 +1,6 @@
 require 'sinatra/base'
+require_relative 'board'
+require_relative 'cell'
 
 class BattleshipWeb < Sinatra::Base
 
@@ -14,6 +16,7 @@ class BattleshipWeb < Sinatra::Base
   end
 
   get '/initialize_game' do
+    @board = Board.new(Cell)
     erb :initialize_game
   end
 
