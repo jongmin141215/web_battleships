@@ -17,5 +17,6 @@ feature 'Starting a new game' do
   scenario 'There is a form to enter your name' do
     visit 'new_game?name=Usman'
     click_button 'Start Game'
+    # expect(page).to have
   end
 end

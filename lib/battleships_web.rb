@@ -13,6 +13,10 @@ class BattleshipWeb < Sinatra::Base
     erb :new_game
   end
 
+  get '/initialize_game' do
+    erb :initialize_game
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
