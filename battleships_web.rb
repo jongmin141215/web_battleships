@@ -1,6 +1,6 @@
 require 'sinatra/base'
-require_relative 'board'
-require_relative 'cell'
+require './lib/board'
+require './lib/cell'
 
 class BattleshipWeb < Sinatra::Base
 
