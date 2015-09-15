@@ -1,4 +1,4 @@
-<div style="border: 2px solid black; width: 500px; height: 500px">
+<!-- <div style="border: 2px solid black; width: 500px; height: 500px">
 <% @board.grid.map do |key, value| %>
   <% if @board.grid[key].content.is_a?(Water) %>
     <div style="background-color: blue; display: inline-block; width: 44px; height: 46px; margin-right: 0"><%= key %></div>
@@ -7,22 +7,26 @@
   <% end %>
 <% end %>
 </div>
-<div>
-
-
+<div> -->
+<div style="border: 2px solid black; width: 500px; height: 500px"> <%= @result %></div
+<%= params %>
    <form action="/initialize_game">
     Place your Patrol Boat:
-    <input type="text" name="location" required>
-    <input type="text" name="orientation" required>
+    <input type="text" name="location_1" required>
+    <input type="text" name="orientation_1">
      <!-- Place your Submarine:
-    <input type="text" name="Location" required>
+    <input type="text" name="location_2" required>
+    <input type="text" name="orientation_2">
     Place your Destroyer:
-    <input type="text" name="Location" required>
+    <input type="text" name="Location_3" required>
+    <input type="text" name="orientation_3">
     Place your Battleship:
-    <input type="text" name="Location" required>
+    <input type="text" name="Location_4" required>
+    <input type="text" name="orientation_4">
     Place your Aircraft Carrier:
-    <input type="text" name="Location" required>  -->
-     <input type="submit" value="Place Ship">
+    <input type="text" name="Location_5" required>
+    <input type="text" name="orientation_5"> -->
+    <input type="submit" value="Place Ship">
    </form>
 
 

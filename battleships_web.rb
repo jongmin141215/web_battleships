@@ -31,6 +31,13 @@ class BattleshipWeb < Sinatra::Base
     @destroyer = Ship.destroyer
     @submarine = Ship.submarine
     @result = @board.print_board
+    @location_1 = params[:location_1].sub(/:/, '').to_sym if params[:location_1]
+    @orientation_1 = params[:orientation_1].sub(/:/, '').to_sym if params[:orientation_1]
+    @board.place(@patrol, @location_1, @orientation_1) if @location_1 && @orientation_1
+    # @location_2 = params[:location_2].sub(/:/, '').to_sym if params[:location_2]
+    # @orientation_2 = params[:orientation_2].sub(/:/, '').to_sym if params[:orientation_2]
+    # @board.place(@patrol, @location_2, @orientation_2) if @location_2 && @orientation_2
+
     erb :initialize_game
 
   end
