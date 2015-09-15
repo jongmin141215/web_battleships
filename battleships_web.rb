@@ -31,6 +31,9 @@ class BattleshipWeb < Sinatra::Base
     @battleship = Ship.battleship
     @destroyer = Ship.destroyer
     @submarine = Ship.submarine
+    @location = params[:location]
+    @orientation = params[:orientation]
+
     erb :initialize_game
 
   end
