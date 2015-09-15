@@ -1,3 +1,6 @@
-<% @board.grid.each do |key, value| %>
-  <div style="border: 2px solid black; display: inline-block"><%= "#{key}" %></div>
+
+<% @a = @board.grid.map do |key, value| key %>
 <% end %>
+
+<% @b = @a.each_slice(10).to_a %>
+<%= @b.each { |b|  b } %>
