@@ -11,24 +11,6 @@ class Board
 		end
 	end
 
-	def print_board
-		 a = grid.map do |key, value|
-			 if value.content.is_a?(Ship)
-				 "<div style='background-color: blue; display: inline-block; width: 44px; height: 46px'> #{key} </div>"
-		 	 else
-				 "<div style='background-color: yellow; display: inline-block; width: 44px; height: 46px'> #{key} </div>"
-			 end
-		 end
-		#  a.map do |a|
-		# 	 if a.content.is_a?(Ship)
-		# 	 "<div style='background-color: blue; display: inline-block; width: 44px; height: 46px'> #{a} </div>"
-		# 	else
-		# 	 "<div style='background-color: yellow; display: inline-block; width: 44px; height: 46px'> #{a} </div>"
-		#  end
-		#  end
-	end
-
-
 	def place(ship, coord, orientation = :horizontally)
 		coords = [coord]
 		(ship.size - 1).times{coords << next_coord(coords.last, orientation)}
